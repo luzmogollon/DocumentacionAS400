@@ -1,0 +1,48 @@
+name: Generar PDF
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - 'Luz_Maria_Mogollon.md'
+  workflow_dispatch:
+
+jobs:
+  generate-pdf:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+        
+      - name: Instalar pandoc y LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc texlive-xetex texlive-lang-spanish
+          
+      - name: Generar PDF
+        run: |
+          pandoc Luz_Maria_Mogollon.md \
+            -o Luz_Maria_Mogollon.pdf \
+            --pdf-engine=xelatex \
+            -V geometry:margin=1in \
+            -V lang=es \
+            --toc \
+            --toc-depth=2
+            
+      - name: Verificar PDF generado
+        run: |
+          ls -lh Luz_Maria_Mogollon.pdf
+          file Luz_Maria_Mogollon.pdf
+          
+      - name: Commit y push del PDF actualizado
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Actualizar PDF generado automáticamente"
+          file_pattern: "Luz_Maria_Mogollon.pdf"
