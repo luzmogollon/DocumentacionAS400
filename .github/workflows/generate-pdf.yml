@@ -16,6 +16,8 @@ jobs:
     steps:
       - name: Checkout código
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
         
       - name: Instalar pandoc y LaTeX
         run: |
@@ -38,11 +40,7 @@ jobs:
           file Luz_Maria_Mogollon.pdf
           
       - name: Commit y push del PDF actualizado
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add Luz_Maria_Mogollon.pdf
-          git diff --staged --quiet || git commit -m "Actualizar PDF generado automáticamente"
-          git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Actualizar PDF generado automáticamente"
+          file_pattern: "Luz_Maria_Mogollon.pdf"
