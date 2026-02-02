@@ -1,0 +1,118 @@
+------------------------------------------------------------
+
+IMPORTANTE:
+La documentación generada debe entregarse en un archivo **exclusivamente en formato Markdown (.md)**,
+usando títulos, subtítulos, listas, tablas y bloques claramente estructurados,
+listos para ser versionados en repositorios Git o convertidos a otros formatos (PDF, Word).
+
+------------------------------------------------------------
+
+Actúa como experto en documentación técnica, AS400 (IBM i) y RPG IV.
+
+La aplicación se encuentra en el archivo [AQUÍ COLOCAR NOMBRE O RUTA DEL ARCHIVO], escrito en RPG IV (formato fijo) y ejecutado en AS400 (IBM i).
+
+Tu tarea es generar una documentación técnica explicativa y didáctica, pensada para los siguientes perfiles:
+- Analista de QA
+- Scrum Master
+- Desarrollador Junior (recién incorporado al equipo)
+- Líder técnico
+- Stakeholder no técnico
+
+Utiliza un lenguaje claro, estructurado y profesional, apoyándote en analogías suaves cuando ayuden a la comprensión,
+sin definiciones obvias ni tono condescendiente.
+
+------------------------------------------------------------
+REGLAS OBLIGATORIAS
+
+1. No copies el código completo: explícalo conceptualmente.
+2. Usa lenguaje simple, evitando jerga técnica sin explicación.
+3. Logra una explicación conceptual, sin entrar al detalle línea por línea del código, enfocándote en:
+   - qué hace el programa
+   - por qué existe
+   - qué problema de negocio o técnico resuelve
+
+------------------------------------------------------------
+ESTRUCTURA OBLIGATORIA
+(Respétala exactamente y en este orden)
+
+1. Crear índice
+
+2. Visión general del programa
+   - Nombre del programa
+   - Plataforma
+   - Lenguaje
+   - Tipo de programa (batch / interactivo / subfile)
+   - Objetivo funcional
+
+3. Estructura general del programa
+   Explica de forma conceptual:
+   - Qué representan las especificaciones H, F, D y C
+   - Qué tipo de archivos utiliza (tablas, pantallas, logs, otros)
+   - Para qué sirven las variables y estructuras principales
+
+4. Flujo principal del programa
+   Explica el flujo lógico general:
+   - bucle principal
+   - control por opciones
+   - uso de indicadores, NEXT u otros mecanismos de control
+
+5. Subrutinas principales
+   - Enumera y explica solo las subrutinas más importantes
+   - Indica qué hace cada una y cuándo se ejecuta
+   - No describas línea por línea
+
+6. Lógica de negocio y validaciones
+   - Resume las reglas de negocio más relevantes
+   - Explica por qué son importantes
+   - Identifica la rutina o zona del programa donde se concentran las validaciones
+
+7. Manejo de datos y auditoría (si aplica)
+   - Inserciones, actualizaciones y eliminaciones
+   - Manejo de logs, historial o trazabilidad
+   - Impacto en la integridad de la información
+
+8. Análisis del código
+   Identifica:
+   - riesgos potenciales
+   - puntos sensibles
+   - código propenso a errores o a alto costo de mantenimiento
+
+9. Síntesis visual y métricas del código (OBLIGATORIO)
+   Presenta una o más tablas como síntesis visual que incluyan, como mínimo:
+   - Tipo de programa
+   - Cantidad aproximada de subrutinas
+   - Uso de condicionales
+   - Complejidad ciclomática estimada (baja / media / alta)
+   - Dificultad de mantenimiento
+
+   Las métricas deben ser estimadas, brevemente justificadas y orientadas a la toma de decisiones.
+
+10. Diagramas de causa–efecto (opcional pero recomendado)
+   Incorpora diagramas causa–efecto (Ishikawa) cuando existan:
+   - riesgos relevantes
+   - errores recurrentes
+   - deuda técnica identificada
+
+11. Conclusión final
+    - Resumen ejecutivo del programa
+    - Nivel de criticidad
+    - Recomendación general
+
+------------------------------------------------------------
+DIAGRAMAS ADICIONALES
+
+Agrega, cuando sea necesario para facilitar la comprensión:
+- Diagrama de flujo
+- Diagrama de secuencia
+
+Úsalos solo cuando aporten claridad real a la funcionalidad del programa.
+
+------------------------------------------------------------
+ESTILO
+
+- Claro, ordenado y profesional
+- Español neutro
+- Enfocado en entendimiento, no en programación
+- Formato Markdown bien estructurado
+
+------------------------------------------------------------
