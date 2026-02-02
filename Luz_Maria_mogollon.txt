@@ -99,13 +99,12 @@ ESTRUCTURA OBLIGATORIA
     - Recomendación general
 
 ------------------------------------------------------------
-DIAGRAMAS ADICIONALES
+DIAGRAMAS OBLIGATORIOS
 
-Agrega, cuando sea necesario para facilitar la comprensión:
+Agrega, obligatoriamente para facilitar la comprensión:
 - Diagrama de flujo
 - Diagrama de secuencia
-
-Úsalos solo cuando aporten claridad real a la funcionalidad del programa.
+Para todos los diagramas usa la herramienta de diagramas Mermaid.
 
 ------------------------------------------------------------
 ESTILO
